@@ -2,7 +2,7 @@ Consignes d'installation :
 
 Clonez le projet : 
 
-```git clone ```
+```git clone https://github.com/jonathangraff/kata_kerdres.git```
 
 Lancez directement le fichier main.py pour rentrer ses propres données
 
