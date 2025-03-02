@@ -46,12 +46,12 @@ def get_winner_and_winning_price(bids: dict[Any, list[int]], reserve_price: int)
     return higher_bidder, max(second_max, reserve_price)
 
 
-
-
 if __name__ == "__main__":
     
     n = int(input("Rentrez le nombres d'enchérisseurs : "))
-    reserve_price = int(input("Rentrez le prix de réserve : "))
+    reserve_price = -1
+    while reserve_price < 0:
+        reserve_price = int(input("Rentrez le prix de réserve : "))
     bids = {}
 
     for i in range(n):
