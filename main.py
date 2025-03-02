@@ -42,8 +42,9 @@ def get_winner_and_winning_price(bids: dict[Any, list[int]], reserve_price: int)
         return None, reserve_price
     
     del(bids[higher_bidder])
-    second_max = custom_max(max(bids.values(), key=custom_max)) if bids else -1
-    return higher_bidder, max(second_max, reserve_price)
+    second_max_bid = custom_max(max(bids.values(), key=custom_max)) if bids else -1
+    winning_prize = max(second_max_bid, reserve_price)
+    return higher_bidder, winning_prize
 
 
 if __name__ == "__main__":
